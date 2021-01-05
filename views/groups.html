@@ -1,0 +1,622 @@
+<!doctype html>
+<!--[if lte IE 9]>     <html lang="en" class="no-focus lt-ie10 lt-ie10-msg"> <![endif]-->
+<!--[if gt IE 9]><!--> <html lang="en" class="no-focus"> <!--<![endif]-->
+<head>
+	<base href="../">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+
+	<title>Dashboard - COCA Admin</title>
+
+	<meta name="description" content="COCA online shop - Admin panel">
+	<meta name="author" content="COCA">
+	<meta name="robots" content="noindex, nofollow">
+
+	<!-- Open Graph Meta -->
+	<meta property="og:title" content="COCA online shop - Admin panel">
+	<meta property="og:site_name" content="COCA">
+	<meta property="og:description" content="COCA online shop - Admin panel">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="">
+	<meta property="og:image" content="">
+
+	<!-- Icons -->
+	<!-- The following icons can be replaced with your own, they are used by desktop and mobile browsers -->
+	<link rel="shortcut icon" href="assets/img/favicons/favicon.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicons/favicon-192x192.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon-180x180.png">
+	<!-- END Icons -->
+
+	<!-- Jquery confirm -->
+	<link rel="stylesheet" href="assets/js/plugins/datatables/dataTables.bootstrap4.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
+	<link rel="stylesheet" href="assets/js/plugins/select2/select2.min.css">
+	<link rel="stylesheet" href="assets/js/plugins/simplemde/css/simplemde.min.css">
+	<!-- Stylesheets -->
+	<!-- Codebase framework -->
+	<link rel="stylesheet" id="css-main" href="assets/css/codebase.min.css">
+	<link rel="stylesheet" href="assets/js/plugins/dropzonejs/dropzone.css">
+
+	<!-- You can include a specific file from css/themes/ folder to alter the default color theme of the template. eg: -->
+	<!-- <link rel="stylesheet" id="css-theme" href="assets/css/themes/flat.min.css"> -->
+	<!-- END Stylesheets -->
+</head>
+<body>
+	<div id="page-container" class="sidebar-o side-scroll page-header-modern main-content-boxed">
+
+		<!-- Side Overlay-->
+		<aside id="side-overlay">
+			<!-- Side Overlay Scroll Container -->
+			<div id="side-overlay-scroll">
+			</div>
+		</aside>
+		<!-- END Side Overlay -->
+
+		<!-- Sidebar -->
+		<nav id="sidebar">
+			<!-- Sidebar Scroll Container -->
+			<div id="sidebar-scroll">
+				<!-- Sidebar Content -->
+				<div class="sidebar-content">
+					<!-- Side Header -->
+					<div class="content-header content-header-fullrow px-15">
+						<!-- Mini Mode -->
+						<div class="content-header-section sidebar-mini-visible-b">
+							<!-- Logo -->
+							<span class="content-header-item font-w700 font-size-xl float-left animated fadeIn">
+								<span class="text-dual-primary-dark">c</span><span class="text-primary">b</span>
+							</span>
+							<!-- END Logo -->
+						</div>
+						<!-- END Mini Mode -->
+
+						<!-- Normal Mode -->
+						<div class="content-header-section text-center align-parent sidebar-mini-hidden">
+							<!-- Close Sidebar, Visible only on mobile screens -->
+							<!-- Layout API, functionality initialized in Codebase() -> uiApiLayout() -->
+							<button type="button" class="btn btn-circle btn-dual-secondary d-lg-none align-v-r" data-toggle="layout" data-action="sidebar_close">
+								<i class="fa fa-times text-danger"></i>
+							</button>
+							<!-- END Close Sidebar -->
+
+							<!-- Logo -->
+							<div class="content-header-item">
+								<a href="dashboard.html">
+									<img src="assets/img/logo.png" style="width: 80px;">
+								</a>
+							</div>
+							<!-- END Logo -->
+						</div>
+						<!-- END Normal Mode -->
+					</div>
+					<!-- END Side Header -->
+
+					<!-- Side User -->
+
+
+					<!-- Side Navigation -->
+					<div class="content-side content-side-full">
+						<ul class="nav-main">
+							<li>
+								<a href="dashboard.html"><i class="si si-cup"></i><span class="sidebar-mini-hide">Dashboard</span></a>
+							</li>
+							<li class="nav-main-heading"><span class="sidebar-mini-visible">UI</span><span class="sidebar-mini-hidden">Catalog</span></li>
+							<li>
+								<a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="si si-tag"></i><span class="sidebar-mini-hide">Categories</span></a>
+								<ul>
+									<li>
+										<a href="categories/groups.html">Groups</a>
+									</li>
+									<li>
+										<a href="categories/sub-groups.html">Sub-groups</a>
+									</li>
+									<li>
+										<a href="categories.html">All Categories</a>
+									</li>
+
+								</ul>
+							</li>
+							<li>
+								<a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="si si-layers"></i><span class="sidebar-mini-hide">Products</span></a>
+								<ul>
+									<li>
+										<a href="products/products.html">Manage Products</a>
+									</li>
+									<li>
+										<a href="products/add-products.html">Add New Products</a>
+									</li>
+
+								</ul>
+							</li>
+							<li class="nav-main-heading"><span class="sidebar-mini-visible">Users</span><span class="sidebar-mini-hidden">Users</span></li>
+
+							<li>
+								<a href="users.html">
+									<i class="si si-people"></i>
+									<span class="sidebar-mini-hide">Users</span>
+								</a>
+							</li>
+
+							<li class="nav-main-heading"><span class="sidebar-mini-visible">Vendors</span><span class="sidebar-mini-hidden">Vendors</span></li>
+
+							<li>
+								<a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="si si-bag"></i><span class="sidebar-mini-hide">Vendors</span></a>
+								<ul>
+									<li>
+										<a href="vendors/merchants.html">Merchant</a>
+									</li>
+									<li>
+										<a href="vendors/shops.html">Shops</a>
+									</li>
+								</ul>
+							</li>
+
+							<li class="nav-main-heading"><span class="sidebar-mini-visible">UI</span><span class="sidebar-mini-hidden">Customers</span></li>
+
+							<li>
+								<a href="customers.html"><i class="si si-wallet"></i><span class="sidebar-mini-hide">Customers</span></a>
+							</li>
+
+							<li>
+								<a href="orders.html">
+									<i class="si si-basket-loaded"></i>
+									<span class="sidebar-mini-hide">Orders</span>
+								</a>
+							</li>
+
+							<li class="nav-main-heading">
+								<span class="sidebar-mini-visible">System</span><span class="sidebar-mini-hidden">System</span>
+							</li>
+							<li>
+								<a href="system/settings.html"><i class="si si-settings"></i><span class="sidebar-mini-hide">Settings</span></a>
+							</li>
+						</ul>
+					</div>
+					<!-- END Side Navigation -->
+				</div>
+				<!-- Sidebar Content -->
+			</div>
+			<!-- END Sidebar Scroll Container -->
+		</nav>
+		<!-- END Sidebar -->
+		<!-- Header -->
+		<header id="page-header">
+			<!-- Header Content -->
+			<div class="content-header">
+				<!-- Left Section -->
+				<div class="content-header-section">
+					<!-- Toggle Sidebar -->
+					<!-- Layout API, functionality initialized in Codebase() -> uiApiLayout() -->
+					<button type="button" class="btn btn-circle btn-dual-secondary" data-toggle="layout" data-action="sidebar_toggle">
+						<i class="fa fa-navicon"></i>
+					</button>
+					<!-- END Toggle Sidebar -->
+
+					<!-- Open Search Section -->
+					<!-- Layout API, functionality initialized in Codebase() -> uiApiLayout() -->
+					<button type="button" class="btn btn-circle btn-dual-secondary" data-toggle="layout" data-action="header_search_on">
+						<i class="fa fa-search"></i>
+					</button>
+					<!-- END Open Search Section -->
+
+					<!-- Layout Options (used just for demonstration) -->
+					<!-- Layout API, functionality initialized in Codebase() -> uiApiLayout() -->
+					<div class="btn-group" role="group">
+						<button type="button" class="btn btn-circle btn-dual-secondary" id="page-header-options-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<i class="fa fa-wrench"></i>
+						</button>
+						<div class="dropdown-menu" aria-labelledby="page-header-options-dropdown">
+							<h6 class="dropdown-header">Header</h6>
+							<button type="button" class="btn btn-sm btn-block btn-alt-secondary" data-toggle="layout" data-action="header_fixed_toggle">Fixed Mode</button>
+							<button type="button" class="btn btn-sm btn-block btn-alt-secondary d-none d-lg-block mb-10" data-toggle="layout" data-action="header_style_classic">Classic Style</button>
+							<div class="d-none d-xl-block">
+								<h6 class="dropdown-header">Main Content</h6>
+								<button type="button" class="btn btn-sm btn-block btn-alt-secondary mb-10" data-toggle="layout" data-action="content_layout_toggle">Toggle Layout</button>
+							</div>
+						</div>
+					</div>
+					<!-- END Layout Options -->
+				</div>
+				<!-- END Left Section -->
+
+				<!-- Right Section -->
+				<div class="content-header-section">
+					<!-- User Dropdown -->
+					<div class="btn-group" role="group">
+						<button type="button" class="btn btn-rounded btn-dual-secondary" id="page-header-user-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							P. Anderson <i class="fa fa-angle-down ml-5"></i>
+						</button>
+						<div class="dropdown-menu dropdown-menu-right min-width-150" aria-labelledby="page-header-user-dropdown">
+							<a class="dropdown-item" href="admin-profile.html">
+								<i class="si si-user mr-5"></i> Profile
+							</a>
+							<!-- Toggle Side Overlay -->
+							<!-- Layout API, functionality initialized in Codebase() -> uiApiLayout() -->
+							<a class="dropdown-item" href="admin-account.html" data-toggle="layout" data-action="side_overlay_toggle">
+								<i class="si si-wrench mr-5"></i> Settings
+							</a>
+
+							<div class="dropdown-divider"></div>
+							<!-- END Side Overlay -->
+
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="/logout">
+								<i class="si si-logout mr-5"></i> Sign Out
+							</a>
+						</div>
+					</div>
+					<!-- END User Dropdown -->
+
+					<!-- Toggle Side Overlay -->
+					<!-- Layout API, functionality initialized in Codebase() -> uiApiLayout() -->
+
+					<!-- END Toggle Side Overlay -->
+				</div>
+				<!-- END Right Section -->
+			</div>
+			<!-- END Header Content -->
+
+			<!-- Header Search -->
+			<div id="page-header-search" class="overlay-header">
+				<div class="content-header content-header-fullrow">
+					<form action="be_pages_generic_search.html" method="post">
+						<div class="input-group">
+							<div class="input-group-prepend">
+								<!-- Close Search Section -->
+								<!-- Layout API, functionality initialized in Codebase() -> uiApiLayout() -->
+								<button type="button" class="btn btn-secondary" data-toggle="layout" data-action="header_search_off">
+									<i class="fa fa-times"></i>
+								</button>
+								<!-- END Close Search Section -->
+							</div>
+							<input type="text" class="form-control" placeholder="Search or hit ESC.." id="page-header-search-input" name="page-header-search-input">
+							<div class="input-group-append">
+								<button type="submit" class="btn btn-secondary">
+									<i class="fa fa-search"></i>
+								</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<!-- END Header Search -->
+
+			<!-- Header Loader -->
+			<!-- Please check out the Activity page under Elements category to see examples of showing/hiding it -->
+			<div id="page-header-loader" class="overlay-header bg-primary">
+				<div class="content-header content-header-fullrow text-center">
+					<div class="content-header-item">
+						<i class="fa fa-sun-o fa-spin text-white"></i>
+					</div>
+				</div>
+			</div>
+			<!-- END Header Loader -->
+		</header>
+		<!-- END Header -->
+    <!-- Main Container -->
+    <main id="main-container">
+        <!-- Page Content -->
+        <div class="content">
+            
+            <div class="block">
+                <div class="block-header block-header-default">
+                    <h3 class="block-title">Category Groups</h3>
+                    <div class="block-options">
+                        <button type="button" class="btn-block-option" data-toggle="block-option" data-action="fullscreen_toggle"></button>
+                        <button type="button" class="btn btn-info ml-4" data-target="#addGroupModal" data-toggle="modal">Add Category Group</button>
+                    </div>
+                </div>
+                <div class="block-content">
+                    <!-- Intro Category -->
+                    <table class="table table-striped table-borderless table-vcenterjs-dataTable-full dataTable">
+                        <thead class="thead-light">
+                            <tr>
+                                <th>Icon</th>
+                                <th>Group</th>
+                                <th class="d-md-table-cell text-center">Sub-groups</th>
+                                <th class="d-md-table-cell text-center" style="width: 90px;">Order</th>
+                                <th class="d-md-table-cell text-center">Status</th>
+                                <th class="d-md-table-cell" width="1"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% if(data.groups.open.length){ %>
+                                <% data.groups.open.forEach(group => { %>
+                                    <tr>
+                                        <td class="text-center" style="width: 65px;">
+                                            <i class="si si-check fa-2x"></i>
+                                        </td>
+                                        <td>
+                                            <a class="font-size-h5 font-w600" href="/admin/categories/sub-groups/<%= group.id %>">
+                                                <%= group.group_name %>
+                                            </a>
+                                            <div class="font-size-sm text-muted">
+                                                <em><%= group.description %></em>
+                                            </div>
+                                        </td>
+                                        <td class="d-md-table-cell text-center">
+                                            <span class="font-w600"><%= group.sub_groups_count %></span>
+                                        </td>
+                                        <td class="d-md-table-cell text-center">
+                                            <span><%= group.order %></span>
+                                        </td>
+                                        <td class="d-md-table-cell text-center">
+                                            <% if(group.active){ %>
+                                            <span class="badge badge-success badge-sm">Active</span>
+                                            <% } else { %>
+                                            <span class="badge badge-secondary badge-sm">Inactive</span>
+                                            <% } %>
+                                        </td>
+                                        <td class="text-center d-md-table-cell">
+                                            <div class="btn-group">
+                                              <button type="button" class="btn btn-sm btn-light" data-toggle="tooltip" title="Edit"
+                                              data-action="edit"
+                                              data-action-getter="categories/groups/get"
+                                              data-action-modal="#editGroupModal"
+                                              data-action-id="<%= group.id %>">
+                                                <i class="si si-pencil"></i>
+                                            </button>
+                                            <button type="button" 
+                                            data-action="trash"
+                                            data-action-title="Move group to trash?"
+                                            data-action-id="<%= group.id %>"
+                                            data-action-process="categories/groups/trash"
+                                            class="btn btn-sm btn-light"
+                                            data-toggle="tooltip" title="Move to trash">
+                                                <i class="si si-trash"></i>
+                                            </button>
+                                        </div>
+                                        </td>
+                                    </tr>
+                                <% }) %>
+                            <% } else { %>
+                                <tr>
+                                    <td colspan="6" class="font-weight-bold py-30 text-center text-flat-lighter">No Groups added.</td>
+                                </tr>
+                            <% } %>
+                        </tbody>
+                    </table>
+                    <!-- END Intro Category -->
+
+
+                    <!-- Support Category -->
+                
+                    <!-- END Support Category -->
+                </div>
+            </div>
+            <!-- END Categories Block -->
+
+            <div class="block block-mode-hidden">
+                <div class="block-header block-header-default">
+                    <h3 class="block-title">Trash</h3>
+                    <small class="badge badge-danger"><%= data.groups.trashed.length %></small>
+                    <div class="block-options">
+                        <button type="button" class="btn-block-option" data-toggle="block-option" data-action="content_toggle"><i class="si si-arrow-up"></i></button>
+                    </div>
+                </div>
+                <div class="block-content">
+                    <table class="table table-striped table-borderless table-vcenter js-dataTable-full dataTable">
+                        <thead class="thead-light">
+                            <tr>
+                                <th>Icon</th>
+                                <th>Group</th>
+                                <th class="d-md-table-cell text-center">Sub-groups</th>
+                                <th class="d-md-table-cell text-center">Deleted At</th>
+                                <th class="d-md-table-cell" style="width: 180px;"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% if(data.groups.trashed.length){ %>
+                                <% data.groups.trashed.map(group => { %>
+                                    <tr>
+                                        <td class="text-center" style="width: 65px;">
+                                            <i class="si si-check fa-2x"></i>
+                                        </td>
+                                        <td>
+                                            <a class="font-size-h5 font-w600" href="/admin/categories/sub-groups/<%= group.id %>">
+                                                <%= group.group_name %>
+                                            </a>
+                                            <div class="font-size-sm text-muted">
+                                                <em><%= group.description %></em>
+                                            </div>
+                                        </td>
+                                        <td class="d-md-table-cell text-center">
+                                            <span class="font-w600"><%= group.sub_groups_count %></span>
+                                        </td>
+                                        <td class="d-md-table-cell text-center">
+                                            <span>
+                                                <%= moment.unix(group.deleted_at._seconds).format("LLL") %>
+                                            </span>
+                                        </td>
+                                        <td class="text-center d-md-table-cell">
+                                            <div class="btn-group">
+                                              <button type="button" class="btn btn-sm btn-light" data-toggle="tooltip" 
+                                            data-action="restore"
+                                            data-action-title="Restore Group?"
+                                            data-action-id="<%= group.id %>"
+                                            data-action-process="categories/groups/restore"
+                                              title="Restore Group">
+                                                <i class="si si-reload"></i>
+                                            </button>
+                                            <button type="button" 
+                                            data-action="delete"
+                                            data-action-title="Delete group permanently?"
+                                            data-action-id="<%= group.id %>"
+                                            data-action-process="categories/groups/delete"
+                                            class="btn btn-sm btn-light"
+                                            data-toggle="tooltip" title="Delete Permanently">
+                                                <i class="si text-danger si-close"></i>
+                                            </button>
+                                        </div>
+                                        </td>
+                                    </tr>
+                                <% }) %>
+                            <% } else  { %>
+                                <tr>
+                                    <td colspan="5" class="text-center">No Groups deleted.</td>
+                                </tr>
+                            <% } %>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- END Page Content -->
+    </main>
+    <!-- END Main Container -->
+ 
+    <!-- Modal -->
+    <div class="modal fade" id="addGroupModal" tabindex="-1" role="dialog" aria-labelledby="addGroupModalTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable|modal-dialog-centered modal-sm|modal-lg|modal-xl" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="addGroupModalTitle">New Category Group</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form action="/admin/process/categories/groups/add" id="addCategoryGroupForm" data-action="modal-form" method="POST">
+                <div class="form-row">
+                    <div class="col form-group">
+                        <label for="">Group Name</label>
+                        <input type="text" data-slug-target="new_group_slug" name="group_name" class="form-control" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col form-group">
+                        <label for="">Description</label>
+                        <textarea name="description" class="form-control"></textarea>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col form-group">
+                        <label for="">Order</label>
+                        <input type="number" name="order" value="0" min="0" class="form-control">
+                    </div>
+                    <div class="col form-group">
+                        <label for="">Status</label>
+                        <select class="custom-select" name="status">
+                            <option value="active">Active</option>
+                            <option value="inactive">Inactive</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col form-group">
+                        <label for="">Slug</label>
+                        <input type="text" data-slug="new_group_slug" name="slug" class="form-control" required>
+                    </div>
+                </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+            <button type="submit" form="addCategoryGroupForm" class="btn btn-success">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="editGroupModal" tabindex="-1" role="dialog" aria-labelledby="editGroupModalTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable|modal-dialog-centered modal-sm|modal-lg|modal-xl" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="editGroupModalTitle">Edit Category Group</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form action="/admin/process/categories/groups/update" data-action=modal-form id="editCategoryGroupForm" method="POST">
+                <div class="form-row">
+                    <div class="col form-group">
+                        <label for="">Group Name</label>
+                        <input type="hidden" data-bind="id" name="group_id" class="form-control">
+                        <input type="text" data-bind="group_name" name="group_name" class="form-control">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col form-group">
+                        <label for="">Description</label>
+                        <textarea name="description" data-bind="description" class="form-control"></textarea>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col form-group">
+                        <label for="">Order</label>
+                        <input type="number" name="order" data-bind="order" id="" class="form-control">
+                    </div>
+                    <div class="col form-group">
+                        <label for="">Status</label>
+                        <select class="custom-select" name="status"  data-bind-select="active">
+                            <option data-bind-value="true" value="active">Active</option>
+                            <option data-bind-value="false" value="inactive">Inactive</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col form-group">
+                        <label for="">Slug</label>
+                        <input type="text" name="slug" data-bind="slug" class="form-control">
+                    </div>
+                </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+            <button type="submit" form="editCategoryGroupForm" class="btn btn-success">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- Footer -->
+<footer id="page-footer" class="opacity-0">
+  <div class="content py-20 font-size-xs clearfix">
+    <div class="float-right">
+      Developed by <a class="font-w600" href="#" target="_blank">Phamous Media</a>
+    </div>
+    <div class="float-left">
+      <a class="font-w600" href="https://COCA.com" target="_blank">COCA</a> &copy; <span class="js-year-copy">2020</span>
+    </div>
+  </div>
+</footer>
+<!-- END Footer -->
+</div>
+<!-- END Page Container -->
+
+<!-- Codebase Core JS -->
+<script src="assets/js/core/jquery.min.js"></script>
+<script src="assets/js/core/bootstrap.bundle.min.js"></script>
+<script src="assets/js/core/jquery.slimscroll.min.js"></script>
+<script src="assets/js/core/jquery.scrollLock.min.js"></script>
+<script src="assets/js/core/jquery.appear.min.js"></script>
+<script src="assets/js/core/jquery.countTo.min.js"></script>
+<script src="assets/js/plugins/select2/select2.full.min.js"></script>
+<script src="assets/js/plugins/dropzonejs/min/dropzone.min.js"></script>
+<script src="assets/js/core/js.cookie.min.js"></script>
+<script src="assets/js/plugins/simplemde/js/simplemde.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/speakingurl/14.0.1/speakingurl.min.js"></script>
+<script src="assets/js/plugins/jquery-slugify/slugify.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js" integrity="sha512-rmZcZsyhe0/MAjquhTgiUcb4d9knaFc7b5xAfju483gbEXTkeJRUMIPk6s3ySZMYUHEcjKbjLjyddGWMrNEvZg==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
+
+<script src="assets/js/plugins/datatables/jquery.dataTables.js"></script>
+<script src="assets/js/plugins/datatables/dataTables.bootstrap4.min.js"></script>
+<script src="assets/js/pages/be_tables_datatables.js"></script>
+
+<script src="assets/js/codebase.js"></script>
+<script src="assets/js/actions.js"></script>
+
+<!-- Page JS Plugins -->
+<script src="assets/js/plugins/chartjs/Chart.bundle.min.js"></script>
+<script src="assets/js/plugins/jquery-validation/jquery.validate.min.js"></script>
+
+
+<!-- Page JS Code -->
+<script src="assets/js/pages/be_pages_dashboard.js"></script>
+<script>
+  moment().format()
+</script>
+</body>
+</html>

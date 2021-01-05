@@ -1,0 +1,634 @@
+<!doctype html>
+<!--[if lte IE 9]>     <html lang="en" class="no-focus lt-ie10 lt-ie10-msg"> <![endif]-->
+<!--[if gt IE 9]><!--> <html lang="en" class="no-focus"> <!--<![endif]-->
+<head>
+	<base href="../">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+
+	<title>Dashboard - COCA Admin</title>
+
+	<meta name="description" content="COCA online shop - Admin panel">
+	<meta name="author" content="COCA">
+	<meta name="robots" content="noindex, nofollow">
+
+	<!-- Open Graph Meta -->
+	<meta property="og:title" content="COCA online shop - Admin panel">
+	<meta property="og:site_name" content="COCA">
+	<meta property="og:description" content="COCA online shop - Admin panel">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="">
+	<meta property="og:image" content="">
+
+	<!-- Icons -->
+	<!-- The following icons can be replaced with your own, they are used by desktop and mobile browsers -->
+	<link rel="shortcut icon" href="assets/img/favicons/favicon.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicons/favicon-192x192.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon-180x180.png">
+	<!-- END Icons -->
+
+	<!-- Jquery confirm -->
+	<link rel="stylesheet" href="assets/js/plugins/datatables/dataTables.bootstrap4.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
+	<link rel="stylesheet" href="assets/js/plugins/select2/select2.min.css">
+	<link rel="stylesheet" href="assets/js/plugins/simplemde/css/simplemde.min.css">
+	<!-- Stylesheets -->
+	<!-- Codebase framework -->
+	<link rel="stylesheet" id="css-main" href="assets/css/codebase.min.css">
+	<link rel="stylesheet" href="assets/js/plugins/dropzonejs/dropzone.css">
+
+	<!-- You can include a specific file from css/themes/ folder to alter the default color theme of the template. eg: -->
+	<!-- <link rel="stylesheet" id="css-theme" href="assets/css/themes/flat.min.css"> -->
+	<!-- END Stylesheets -->
+</head>
+<body>
+	<div id="page-container" class="sidebar-o side-scroll page-header-modern main-content-boxed">
+
+		<!-- Side Overlay-->
+		<aside id="side-overlay">
+			<!-- Side Overlay Scroll Container -->
+			<div id="side-overlay-scroll">
+			</div>
+		</aside>
+		<!-- END Side Overlay -->
+
+		<!-- Sidebar -->
+		<nav id="sidebar">
+			<!-- Sidebar Scroll Container -->
+			<div id="sidebar-scroll">
+				<!-- Sidebar Content -->
+				<div class="sidebar-content">
+					<!-- Side Header -->
+					<div class="content-header content-header-fullrow px-15">
+						<!-- Mini Mode -->
+						<div class="content-header-section sidebar-mini-visible-b">
+							<!-- Logo -->
+							<span class="content-header-item font-w700 font-size-xl float-left animated fadeIn">
+								<span class="text-dual-primary-dark">c</span><span class="text-primary">b</span>
+							</span>
+							<!-- END Logo -->
+						</div>
+						<!-- END Mini Mode -->
+
+						<!-- Normal Mode -->
+						<div class="content-header-section text-center align-parent sidebar-mini-hidden">
+							<!-- Close Sidebar, Visible only on mobile screens -->
+							<!-- Layout API, functionality initialized in Codebase() -> uiApiLayout() -->
+							<button type="button" class="btn btn-circle btn-dual-secondary d-lg-none align-v-r" data-toggle="layout" data-action="sidebar_close">
+								<i class="fa fa-times text-danger"></i>
+							</button>
+							<!-- END Close Sidebar -->
+
+							<!-- Logo -->
+							<div class="content-header-item">
+								<a href="dashboard.html">
+									<img src="assets/img/logo.png" style="width: 80px;">
+								</a>
+							</div>
+							<!-- END Logo -->
+						</div>
+						<!-- END Normal Mode -->
+					</div>
+					<!-- END Side Header -->
+
+					<!-- Side User -->
+
+
+					<!-- Side Navigation -->
+					<div class="content-side content-side-full">
+						<ul class="nav-main">
+							<li>
+								<a href="dashboard.html"><i class="si si-cup"></i><span class="sidebar-mini-hide">Dashboard</span></a>
+							</li>
+							<li class="nav-main-heading"><span class="sidebar-mini-visible">UI</span><span class="sidebar-mini-hidden">Catalog</span></li>
+							<li>
+								<a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="si si-tag"></i><span class="sidebar-mini-hide">Categories</span></a>
+								<ul>
+									<li>
+										<a href="categories/groups.html">Groups</a>
+									</li>
+									<li>
+										<a href="categories/sub-groups.html">Sub-groups</a>
+									</li>
+									<li>
+										<a href="categories.html">All Categories</a>
+									</li>
+
+								</ul>
+							</li>
+							<li>
+								<a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="si si-layers"></i><span class="sidebar-mini-hide">Products</span></a>
+								<ul>
+									<li>
+										<a href="products/products.html">Manage Products</a>
+									</li>
+									<li>
+										<a href="products/add-products.html">Add New Products</a>
+									</li>
+
+								</ul>
+							</li>
+							<li class="nav-main-heading"><span class="sidebar-mini-visible">Users</span><span class="sidebar-mini-hidden">Users</span></li>
+
+							<li>
+								<a href="users.html">
+									<i class="si si-people"></i>
+									<span class="sidebar-mini-hide">Users</span>
+								</a>
+							</li>
+
+							<li class="nav-main-heading"><span class="sidebar-mini-visible">Vendors</span><span class="sidebar-mini-hidden">Vendors</span></li>
+
+							<li>
+								<a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="si si-bag"></i><span class="sidebar-mini-hide">Vendors</span></a>
+								<ul>
+									<li>
+										<a href="vendors/merchants.html">Merchant</a>
+									</li>
+									<li>
+										<a href="vendors/shops.html">Shops</a>
+									</li>
+								</ul>
+							</li>
+
+							<li class="nav-main-heading"><span class="sidebar-mini-visible">UI</span><span class="sidebar-mini-hidden">Customers</span></li>
+
+							<li>
+								<a href="customers.html"><i class="si si-wallet"></i><span class="sidebar-mini-hide">Customers</span></a>
+							</li>
+
+							<li>
+								<a href="orders.html">
+									<i class="si si-basket-loaded"></i>
+									<span class="sidebar-mini-hide">Orders</span>
+								</a>
+							</li>
+
+							<li class="nav-main-heading">
+								<span class="sidebar-mini-visible">System</span><span class="sidebar-mini-hidden">System</span>
+							</li>
+							<li>
+								<a href="system/settings.html"><i class="si si-settings"></i><span class="sidebar-mini-hide">Settings</span></a>
+							</li>
+						</ul>
+					</div>
+					<!-- END Side Navigation -->
+				</div>
+				<!-- Sidebar Content -->
+			</div>
+			<!-- END Sidebar Scroll Container -->
+		</nav>
+		<!-- END Sidebar -->
+		<!-- Header -->
+		<header id="page-header">
+			<!-- Header Content -->
+			<div class="content-header">
+				<!-- Left Section -->
+				<div class="content-header-section">
+					<!-- Toggle Sidebar -->
+					<!-- Layout API, functionality initialized in Codebase() -> uiApiLayout() -->
+					<button type="button" class="btn btn-circle btn-dual-secondary" data-toggle="layout" data-action="sidebar_toggle">
+						<i class="fa fa-navicon"></i>
+					</button>
+					<!-- END Toggle Sidebar -->
+
+					<!-- Open Search Section -->
+					<!-- Layout API, functionality initialized in Codebase() -> uiApiLayout() -->
+					<button type="button" class="btn btn-circle btn-dual-secondary" data-toggle="layout" data-action="header_search_on">
+						<i class="fa fa-search"></i>
+					</button>
+					<!-- END Open Search Section -->
+
+					<!-- Layout Options (used just for demonstration) -->
+					<!-- Layout API, functionality initialized in Codebase() -> uiApiLayout() -->
+					<div class="btn-group" role="group">
+						<button type="button" class="btn btn-circle btn-dual-secondary" id="page-header-options-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<i class="fa fa-wrench"></i>
+						</button>
+						<div class="dropdown-menu" aria-labelledby="page-header-options-dropdown">
+							<h6 class="dropdown-header">Header</h6>
+							<button type="button" class="btn btn-sm btn-block btn-alt-secondary" data-toggle="layout" data-action="header_fixed_toggle">Fixed Mode</button>
+							<button type="button" class="btn btn-sm btn-block btn-alt-secondary d-none d-lg-block mb-10" data-toggle="layout" data-action="header_style_classic">Classic Style</button>
+							<div class="d-none d-xl-block">
+								<h6 class="dropdown-header">Main Content</h6>
+								<button type="button" class="btn btn-sm btn-block btn-alt-secondary mb-10" data-toggle="layout" data-action="content_layout_toggle">Toggle Layout</button>
+							</div>
+						</div>
+					</div>
+					<!-- END Layout Options -->
+				</div>
+				<!-- END Left Section -->
+
+				<!-- Right Section -->
+				<div class="content-header-section">
+					<!-- User Dropdown -->
+					<div class="btn-group" role="group">
+						<button type="button" class="btn btn-rounded btn-dual-secondary" id="page-header-user-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							P. Anderson <i class="fa fa-angle-down ml-5"></i>
+						</button>
+						<div class="dropdown-menu dropdown-menu-right min-width-150" aria-labelledby="page-header-user-dropdown">
+							<a class="dropdown-item" href="admin-profile.html">
+								<i class="si si-user mr-5"></i> Profile
+							</a>
+							<!-- Toggle Side Overlay -->
+							<!-- Layout API, functionality initialized in Codebase() -> uiApiLayout() -->
+							<a class="dropdown-item" href="admin-account.html" data-toggle="layout" data-action="side_overlay_toggle">
+								<i class="si si-wrench mr-5"></i> Settings
+							</a>
+
+							<div class="dropdown-divider"></div>
+							<!-- END Side Overlay -->
+
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="/logout">
+								<i class="si si-logout mr-5"></i> Sign Out
+							</a>
+						</div>
+					</div>
+					<!-- END User Dropdown -->
+
+					<!-- Toggle Side Overlay -->
+					<!-- Layout API, functionality initialized in Codebase() -> uiApiLayout() -->
+
+					<!-- END Toggle Side Overlay -->
+				</div>
+				<!-- END Right Section -->
+			</div>
+			<!-- END Header Content -->
+
+			<!-- Header Search -->
+			<div id="page-header-search" class="overlay-header">
+				<div class="content-header content-header-fullrow">
+					<form action="be_pages_generic_search.html" method="post">
+						<div class="input-group">
+							<div class="input-group-prepend">
+								<!-- Close Search Section -->
+								<!-- Layout API, functionality initialized in Codebase() -> uiApiLayout() -->
+								<button type="button" class="btn btn-secondary" data-toggle="layout" data-action="header_search_off">
+									<i class="fa fa-times"></i>
+								</button>
+								<!-- END Close Search Section -->
+							</div>
+							<input type="text" class="form-control" placeholder="Search or hit ESC.." id="page-header-search-input" name="page-header-search-input">
+							<div class="input-group-append">
+								<button type="submit" class="btn btn-secondary">
+									<i class="fa fa-search"></i>
+								</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<!-- END Header Search -->
+
+			<!-- Header Loader -->
+			<!-- Please check out the Activity page under Elements category to see examples of showing/hiding it -->
+			<div id="page-header-loader" class="overlay-header bg-primary">
+				<div class="content-header content-header-fullrow text-center">
+					<div class="content-header-item">
+						<i class="fa fa-sun-o fa-spin text-white"></i>
+					</div>
+				</div>
+			</div>
+			<!-- END Header Loader -->
+		</header>
+		<!-- END Header -->
+<!-- Main Container -->
+<main id="main-container">
+<!-- Hero -->
+<div class="bg-image" style="background-image: url('assets/img/photos/photo26@2x.jpg');">
+    <div class="bg-black-op-75">
+        <div class="content content-top content-full text-center">
+            <div class="py-20">
+                <h1 class="h2 font-w700 text-white mb-10">Products</h1>
+                <h2 class="h4 font-w400 text-white-op mb-0">You currently have <%= data.products.open.length %> in the catalog!</h2>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END Hero -->
+
+<!-- Breadcrumb -->
+<div class="bg-body-light border-b">
+    <div class="content py-5 text-center">
+        <nav class="breadcrumb bg-body-light mb-0">
+            <a class="breadcrumb-item" href="be_pages_ecom_dashboard.html">Home</a>
+            <span class="breadcrumb-item active">Products</span>
+        </nav>
+    </div>
+</div>
+<!-- END Breadcrumb -->
+
+<!-- Page Content -->
+<div class="content">
+    <!-- Overview -->
+    <h2 class="content-heading">Overview</h2>
+    <div class="row gutters-tiny">
+        <!-- All Products -->
+        <div class="col-md-6 col-xl-3">
+            <a class="block block-rounded block-link-shadow" href="javascript:void(0)">
+                <div class="block-content block-content-full block-sticky-options">
+                    <div class="block-options">
+                        <div class="block-options-item">
+                            <i class="fa fa-circle-o fa-2x text-info-light"></i>
+                        </div>
+                    </div>
+                    <div class="py-20 text-center">
+                        <div class="font-size-h2 font-w700 mb-0 text-info" data-toggle="countTo" data-to="<%= data.products.open.length %>">0</div>
+                        <div class="font-size-sm font-w600 text-uppercase text-muted">All Products</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!-- END All Products -->
+
+        <!-- Top Sellers -->
+        <div class="col-md-6 col-xl-3">
+            <a class="block block-rounded block-link-shadow" href="javascript:void(0)">
+                <div class="block-content block-content-full block-sticky-options">
+                    <div class="block-options">
+                        <div class="block-options-item">
+                            <i class="fa fa-star fa-2x text-warning-light"></i>
+                        </div>
+                    </div>
+                    <div class="py-20 text-center">
+                        <div class="font-size-h2 font-w700 mb-0 text-warning" data-toggle="countTo" data-to="0">0</div>
+                        <div class="font-size-sm font-w600 text-uppercase text-muted">Top Sellers</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!-- END Top Sellers -->
+
+        <!-- Out of Stock -->
+        <div class="col-md-6 col-xl-3">
+            <a class="block block-rounded block-link-shadow" href="javascript:void(0)">
+                <div class="block-content block-content-full block-sticky-options">
+                    <div class="block-options">
+                        <div class="block-options-item">
+                            <i class="fa fa-warning fa-2x text-danger-light"></i>
+                        </div>
+                    </div>
+                    <div class="py-20 text-center">
+                        <div class="font-size-h2 font-w700 mb-0 text-danger" data-toggle="countTo" data-to="<%= data.outOfStock.length %>">0</div>
+                        <div class="font-size-sm font-w600 text-uppercase text-muted">Out of Stock</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!-- END Out of Stock -->
+
+        <!-- Add Product -->
+        <div class="col-md-6 col-xl-3">
+            <a class="block block-rounded block-link-shadow" href="/admin/add-products">
+                <div class="block-content block-content-full block-sticky-options">
+                    <div class="block-options">
+                        <div class="block-options-item">
+                            <i class="fa fa-archive fa-2x text-success-light"></i>
+                        </div>
+                    </div>
+                    <div class="py-20 text-center">
+                        <div class="font-size-h2 font-w700 mb-0 text-success">
+                            <i class="fa fa-plus"></i>
+                        </div>
+                        <div class="font-size-sm font-w600 text-uppercase text-muted">New Product</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!-- END Add Product -->
+    </div>
+    <!-- END Overview -->
+
+    <!-- Products -->
+    <div class="content-heading">
+        <div class="dropdown float-right">
+            <button type="button" class="btn btn-sm btn-secondary dropdown-toggle" id="ecom-products-filter-drop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                All
+            </button>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="ecom-products-filter-drop">
+                <a class="dropdown-item" href="javascript:void(0)">
+                    <i class="fa fa-fw fa-star text-warning mr-5"></i>Top Sellers
+                </a>
+                <a class="dropdown-item" href="javascript:void(0)">
+                    <i class="fa fa-fw fa-warning text-danger mr-5"></i>Out of Stock
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item active" href="javascript:void(0)">
+                    <i class="fa fa-fw fa-circle-o text-info mr-5"></i>All
+                </a>
+            </div>
+        </div>
+       <!--  <div class="dropdown float-right mr-5">
+            <button type="button" class="btn btn-sm btn-secondary dropdown-toggle" id="ecom-products-category-drop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Category
+            </button>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="ecom-products-category-drop">
+                <a class="dropdown-item" href="javascript:void(0)">
+                    <i class="fa fa-fw fa-gamepad mr-5"></i>Video Games
+                </a>
+                <a class="dropdown-item" href="javascript:void(0)">
+                    <i class="fa fa-fw fa-desktop mr-5"></i>Electronics
+                </a>
+                <a class="dropdown-item" href="javascript:void(0)">
+                    <i class="fa fa-fw fa-mobile-phone mr-5"></i>Mobile Phones
+                </a>
+                <a class="dropdown-item" href="javascript:void(0)">
+                    <i class="fa fa-fw fa-home mr-5"></i>House
+                </a>
+                <a class="dropdown-item" href="javascript:void(0)">
+                    <i class="fa fa-fw fa-soccer-ball-o mr-5"></i>Hobby
+                </a>
+                <a class="dropdown-item" href="javascript:void(0)">
+                    <i class="fa fa-fw fa-car mr-5"></i>Auto - Moto
+                </a>
+                <a class="dropdown-item" href="javascript:void(0)">
+                    <i class="fa fa-fw fa-users mr-5"></i>Kids
+                </a>
+                <a class="dropdown-item" href="javascript:void(0)">
+                    <i class="fa fa-fw fa-heartbeat mr-5"></i>Health
+                </a>
+                <a class="dropdown-item" href="javascript:void(0)">
+                    <i class="fa fa-fw fa-black-tie mr-5"></i>Fashion
+                </a>
+            </div>
+        </div> -->
+        Products
+    </div>
+    <div class="block">
+      <ul class="nav nav-tabs nav-tabs-alt js-tabs-ensabled" data-toggle="tabs" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" href="#active-products">Active Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#top-sellers">Top Sellers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#out-of-stock">Out Of Stock</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#inactive-products">Inactive Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#trashed-products">Trashed Products</a>
+        </li>
+      </ul>
+      <div class="block-content tab-content">
+        <div class="tab-pane active" id="active-products" role="tabpanel">
+            <hr>
+            <!-- Products Table -->
+            <table class="table table-borderless table-striped">
+                <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th class="d-none d-sm-table-cell" width="40%">Product</th>
+                        <th class="d-none d-md-table-cell" width="10%">Category</th>
+                        <th class="d-none d-sm-table-cell text-center">Vendor</th>
+                        <th class="text-right" width="1">Unit Price</th>
+                        <th class="text-right" width="1">Discounted Price</th>
+                        <th width="1">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% if(data.products.open.length){ %>
+                        <% data.products.open.map((product, index) => { %>
+                            <tr>
+                                <td><img src="<%= product.images[0] || "/assets/img/placeholder.png" %>" width="48"></td>
+                                <td>
+                                    <a href="#" class="font-w600"><%= product.name %></a>
+                                    <div><span class="text-info">ID: <%= product.product_id %></span></div>
+                                    <div><span class="text-info">SKU: <%= product.SKU %></span></div>
+                                </td>
+                                <td>
+                                    <span class="badge badge-light"><%= product.group.group_name %></span>
+                                    <span class="badge badge-light"><%= product.subgroup.sub_group_name %></span>
+                                    <span class="badge badge-light"><%= product.category.category_name %></span>
+                                </td>
+                                <td class="text-center font-w500"><a href="#"><%= product.vendor.business %></a></td>
+                                <td class="text-right"><%= money_format(product.price) %></td>
+                                <td class="text-right"><%= money_format(product.discounted_price || product.price) %></td>
+                                <td class="align-middle text-center text-nowrap">
+                                    <button class="btn btn-sm"><i class="fa fa-barcode"></i></button>
+                                    <button class="btn btn-sm"><i class="fa fa-edit"></i></button>
+                                    <button class="btn btn-sm"><i class="fa fa-trash"></i></button>
+                                </td>
+                            </tr>
+                        <% }) %>
+                    <% } %>
+                </tbody>
+            </table>
+            <!-- END Products Table -->
+        </div>
+        <div class="tab-pane" id="top-sellers" role="tabpanel">
+          <!-- <h4 class="font-size-h5 font-w400 mt-15 text-corporate">System Roles</h4> -->
+          <p>...</p>
+        </div>
+        <div class="tab-pane" id="out-of-stock" role="tabpanel">
+          <!-- <h4 class="font-size-h5 font-w400 mt-15 text-corporate">Shop Settings</h4> -->
+          <p>...</p>
+        </div>
+        <div class="tab-pane" id="inactive-products" role="tabpanel">
+          <!-- <h4 class="font-size-h5 font-w400 mt-15 text-corporate">Inactive Products</h4> -->
+          <p>...</p>
+        </div>
+        <div class="tab-pane" id="trashed-products" role="tabpanel">
+            <hr>
+            <!-- Products Table -->
+            <table class="table table-borderless table-striped">
+                <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th class="d-none d-sm-table-cell" width="40%">Product</th>
+                        <th class="d-none d-md-table-cell" width="10%">Category</th>
+                        <th class="d-none d-sm-table-cell text-center">Vendor</th>
+                        <th class="text-right" width="1">Unit Price</th>
+                        <th class="text-right" width="1">Discounted Price</th>
+                        <th width="1">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% if(data.products.trashed.length){ %>
+                        <% data.products.trashed.map((product, index) => { %>
+                            <tr>
+                                <td><img src="<%= product.images[0] || "/assets/img/placeholder.png" %>" width="48"></td>
+                                <td>
+                                    <a href="#" class="font-w600"><%= product.name %></a>
+                                    <div><span class="text-info">ID: <%= product.product_id %></span></div>
+                                    <div><span class="text-info">SKU: <%= product.SKU %></span></div>
+                                </td>
+                                <td>
+                                    <span class="badge badge-light"><%= product.group.group_name %></span>
+                                    <span class="badge badge-light"><%= product.subgroup.sub_group_name %></span>
+                                    <span class="badge badge-light"><%= product.category.category_name %></span>
+                                </td>
+                                <td class="text-center font-w500"><a href="#"><%= product.vendor.business %></a></td>
+                                <td class="text-right"><%= money_format(product.price) %></td>
+                                <td class="text-right"><%= money_format(product.discounted_price || product.price) %></td>
+                                <td class="align-middle text-center text-nowrap">
+                                    <button class="btn btn-sm"><i class="fa fa-barcode"></i></button>
+                                    <button class="btn btn-sm"><i class="fa fa-edit"></i></button>
+                                    <button class="btn btn-sm"><i class="fa fa-trash"></i></button>
+                                </td>
+                            </tr>
+                        <% }) %>
+                    <% } %>
+                </tbody>
+            </table>
+        </div>
+      </div>
+    </div>
+    <!-- END Products -->
+</div>
+<!-- END Page Content -->
+</main>
+<!-- END Main Container -->
+<!-- Footer -->
+<footer id="page-footer" class="opacity-0">
+  <div class="content py-20 font-size-xs clearfix">
+    <div class="float-right">
+      Developed by <a class="font-w600" href="#" target="_blank">Phamous Media</a>
+    </div>
+    <div class="float-left">
+      <a class="font-w600" href="https://COCA.com" target="_blank">COCA</a> &copy; <span class="js-year-copy">2020</span>
+    </div>
+  </div>
+</footer>
+<!-- END Footer -->
+</div>
+<!-- END Page Container -->
+
+<!-- Codebase Core JS -->
+<script src="assets/js/core/jquery.min.js"></script>
+<script src="assets/js/core/bootstrap.bundle.min.js"></script>
+<script src="assets/js/core/jquery.slimscroll.min.js"></script>
+<script src="assets/js/core/jquery.scrollLock.min.js"></script>
+<script src="assets/js/core/jquery.appear.min.js"></script>
+<script src="assets/js/core/jquery.countTo.min.js"></script>
+<script src="assets/js/plugins/select2/select2.full.min.js"></script>
+<script src="assets/js/plugins/dropzonejs/min/dropzone.min.js"></script>
+<script src="assets/js/core/js.cookie.min.js"></script>
+<script src="assets/js/plugins/simplemde/js/simplemde.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/speakingurl/14.0.1/speakingurl.min.js"></script>
+<script src="assets/js/plugins/jquery-slugify/slugify.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js" integrity="sha512-rmZcZsyhe0/MAjquhTgiUcb4d9knaFc7b5xAfju483gbEXTkeJRUMIPk6s3ySZMYUHEcjKbjLjyddGWMrNEvZg==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
+
+<script src="assets/js/plugins/datatables/jquery.dataTables.js"></script>
+<script src="assets/js/plugins/datatables/dataTables.bootstrap4.min.js"></script>
+<script src="assets/js/pages/be_tables_datatables.js"></script>
+
+<script src="assets/js/codebase.js"></script>
+<script src="assets/js/actions.js"></script>
+
+<!-- Page JS Plugins -->
+<script src="assets/js/plugins/chartjs/Chart.bundle.min.js"></script>
+<script src="assets/js/plugins/jquery-validation/jquery.validate.min.js"></script>
+
+
+<!-- Page JS Code -->
+<script src="assets/js/pages/be_pages_dashboard.js"></script>
+<script>
+  moment().format()
+</script>
+</body>
+</html>

@@ -1,0 +1,657 @@
+<!doctype html>
+<!--[if lte IE 9]>     <html lang="en" class="no-focus lt-ie10 lt-ie10-msg"> <![endif]-->
+<!--[if gt IE 9]><!--> <html lang="en" class="no-focus"> <!--<![endif]-->
+<head>
+	<base href="../">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+
+	<title>Dashboard - COCA Admin</title>
+
+	<meta name="description" content="COCA online shop - Admin panel">
+	<meta name="author" content="COCA">
+	<meta name="robots" content="noindex, nofollow">
+
+	<!-- Open Graph Meta -->
+	<meta property="og:title" content="COCA online shop - Admin panel">
+	<meta property="og:site_name" content="COCA">
+	<meta property="og:description" content="COCA online shop - Admin panel">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="">
+	<meta property="og:image" content="">
+
+	<!-- Icons -->
+	<!-- The following icons can be replaced with your own, they are used by desktop and mobile browsers -->
+	<link rel="shortcut icon" href="assets/img/favicons/favicon.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicons/favicon-192x192.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon-180x180.png">
+	<!-- END Icons -->
+
+	<!-- Jquery confirm -->
+	<link rel="stylesheet" href="assets/js/plugins/datatables/dataTables.bootstrap4.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
+	<link rel="stylesheet" href="assets/js/plugins/select2/select2.min.css">
+	<link rel="stylesheet" href="assets/js/plugins/simplemde/css/simplemde.min.css">
+	<!-- Stylesheets -->
+	<!-- Codebase framework -->
+	<link rel="stylesheet" id="css-main" href="assets/css/codebase.min.css">
+	<link rel="stylesheet" href="assets/js/plugins/dropzonejs/dropzone.css">
+
+	<!-- You can include a specific file from css/themes/ folder to alter the default color theme of the template. eg: -->
+	<!-- <link rel="stylesheet" id="css-theme" href="assets/css/themes/flat.min.css"> -->
+	<!-- END Stylesheets -->
+</head>
+<body>
+	<div id="page-container" class="sidebar-o side-scroll page-header-modern main-content-boxed">
+
+		<!-- Side Overlay-->
+		<aside id="side-overlay">
+			<!-- Side Overlay Scroll Container -->
+			<div id="side-overlay-scroll">
+			</div>
+		</aside>
+		<!-- END Side Overlay -->
+
+		<!-- Sidebar -->
+		<nav id="sidebar">
+			<!-- Sidebar Scroll Container -->
+			<div id="sidebar-scroll">
+				<!-- Sidebar Content -->
+				<div class="sidebar-content">
+					<!-- Side Header -->
+					<div class="content-header content-header-fullrow px-15">
+						<!-- Mini Mode -->
+						<div class="content-header-section sidebar-mini-visible-b">
+							<!-- Logo -->
+							<span class="content-header-item font-w700 font-size-xl float-left animated fadeIn">
+								<span class="text-dual-primary-dark">c</span><span class="text-primary">b</span>
+							</span>
+							<!-- END Logo -->
+						</div>
+						<!-- END Mini Mode -->
+
+						<!-- Normal Mode -->
+						<div class="content-header-section text-center align-parent sidebar-mini-hidden">
+							<!-- Close Sidebar, Visible only on mobile screens -->
+							<!-- Layout API, functionality initialized in Codebase() -> uiApiLayout() -->
+							<button type="button" class="btn btn-circle btn-dual-secondary d-lg-none align-v-r" data-toggle="layout" data-action="sidebar_close">
+								<i class="fa fa-times text-danger"></i>
+							</button>
+							<!-- END Close Sidebar -->
+
+							<!-- Logo -->
+							<div class="content-header-item">
+								<a href="dashboard.html">
+									<img src="assets/img/logo.png" style="width: 80px;">
+								</a>
+							</div>
+							<!-- END Logo -->
+						</div>
+						<!-- END Normal Mode -->
+					</div>
+					<!-- END Side Header -->
+
+					<!-- Side User -->
+
+
+					<!-- Side Navigation -->
+					<div class="content-side content-side-full">
+						<ul class="nav-main">
+							<li>
+								<a href="dashboard.html"><i class="si si-cup"></i><span class="sidebar-mini-hide">Dashboard</span></a>
+							</li>
+							<li class="nav-main-heading"><span class="sidebar-mini-visible">UI</span><span class="sidebar-mini-hidden">Catalog</span></li>
+							<li>
+								<a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="si si-tag"></i><span class="sidebar-mini-hide">Categories</span></a>
+								<ul>
+									<li>
+										<a href="categories/groups.html">Groups</a>
+									</li>
+									<li>
+										<a href="categories/sub-groups.html">Sub-groups</a>
+									</li>
+									<li>
+										<a href="categories.html">All Categories</a>
+									</li>
+
+								</ul>
+							</li>
+							<li>
+								<a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="si si-layers"></i><span class="sidebar-mini-hide">Products</span></a>
+								<ul>
+									<li>
+										<a href="products/products.html">Manage Products</a>
+									</li>
+									<li>
+										<a href="products/add-products.html">Add New Products</a>
+									</li>
+
+								</ul>
+							</li>
+							<li class="nav-main-heading"><span class="sidebar-mini-visible">Users</span><span class="sidebar-mini-hidden">Users</span></li>
+
+							<li>
+								<a href="users.html">
+									<i class="si si-people"></i>
+									<span class="sidebar-mini-hide">Users</span>
+								</a>
+							</li>
+
+							<li class="nav-main-heading"><span class="sidebar-mini-visible">Vendors</span><span class="sidebar-mini-hidden">Vendors</span></li>
+
+							<li>
+								<a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="si si-bag"></i><span class="sidebar-mini-hide">Vendors</span></a>
+								<ul>
+									<li>
+										<a href="vendors/merchants.html">Merchant</a>
+									</li>
+									<li>
+										<a href="vendors/shops.html">Shops</a>
+									</li>
+								</ul>
+							</li>
+
+							<li class="nav-main-heading"><span class="sidebar-mini-visible">UI</span><span class="sidebar-mini-hidden">Customers</span></li>
+
+							<li>
+								<a href="customers.html"><i class="si si-wallet"></i><span class="sidebar-mini-hide">Customers</span></a>
+							</li>
+
+							<li>
+								<a href="orders.html">
+									<i class="si si-basket-loaded"></i>
+									<span class="sidebar-mini-hide">Orders</span>
+								</a>
+							</li>
+
+							<li class="nav-main-heading">
+								<span class="sidebar-mini-visible">System</span><span class="sidebar-mini-hidden">System</span>
+							</li>
+							<li>
+								<a href="system/settings.html"><i class="si si-settings"></i><span class="sidebar-mini-hide">Settings</span></a>
+							</li>
+						</ul>
+					</div>
+					<!-- END Side Navigation -->
+				</div>
+				<!-- Sidebar Content -->
+			</div>
+			<!-- END Sidebar Scroll Container -->
+		</nav>
+		<!-- END Sidebar -->
+		<!-- Header -->
+		<header id="page-header">
+			<!-- Header Content -->
+			<div class="content-header">
+				<!-- Left Section -->
+				<div class="content-header-section">
+					<!-- Toggle Sidebar -->
+					<!-- Layout API, functionality initialized in Codebase() -> uiApiLayout() -->
+					<button type="button" class="btn btn-circle btn-dual-secondary" data-toggle="layout" data-action="sidebar_toggle">
+						<i class="fa fa-navicon"></i>
+					</button>
+					<!-- END Toggle Sidebar -->
+
+					<!-- Open Search Section -->
+					<!-- Layout API, functionality initialized in Codebase() -> uiApiLayout() -->
+					<button type="button" class="btn btn-circle btn-dual-secondary" data-toggle="layout" data-action="header_search_on">
+						<i class="fa fa-search"></i>
+					</button>
+					<!-- END Open Search Section -->
+
+					<!-- Layout Options (used just for demonstration) -->
+					<!-- Layout API, functionality initialized in Codebase() -> uiApiLayout() -->
+					<div class="btn-group" role="group">
+						<button type="button" class="btn btn-circle btn-dual-secondary" id="page-header-options-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<i class="fa fa-wrench"></i>
+						</button>
+						<div class="dropdown-menu" aria-labelledby="page-header-options-dropdown">
+							<h6 class="dropdown-header">Header</h6>
+							<button type="button" class="btn btn-sm btn-block btn-alt-secondary" data-toggle="layout" data-action="header_fixed_toggle">Fixed Mode</button>
+							<button type="button" class="btn btn-sm btn-block btn-alt-secondary d-none d-lg-block mb-10" data-toggle="layout" data-action="header_style_classic">Classic Style</button>
+							<div class="d-none d-xl-block">
+								<h6 class="dropdown-header">Main Content</h6>
+								<button type="button" class="btn btn-sm btn-block btn-alt-secondary mb-10" data-toggle="layout" data-action="content_layout_toggle">Toggle Layout</button>
+							</div>
+						</div>
+					</div>
+					<!-- END Layout Options -->
+				</div>
+				<!-- END Left Section -->
+
+				<!-- Right Section -->
+				<div class="content-header-section">
+					<!-- User Dropdown -->
+					<div class="btn-group" role="group">
+						<button type="button" class="btn btn-rounded btn-dual-secondary" id="page-header-user-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							P. Anderson <i class="fa fa-angle-down ml-5"></i>
+						</button>
+						<div class="dropdown-menu dropdown-menu-right min-width-150" aria-labelledby="page-header-user-dropdown">
+							<a class="dropdown-item" href="admin-profile.html">
+								<i class="si si-user mr-5"></i> Profile
+							</a>
+							<!-- Toggle Side Overlay -->
+							<!-- Layout API, functionality initialized in Codebase() -> uiApiLayout() -->
+							<a class="dropdown-item" href="admin-account.html" data-toggle="layout" data-action="side_overlay_toggle">
+								<i class="si si-wrench mr-5"></i> Settings
+							</a>
+
+							<div class="dropdown-divider"></div>
+							<!-- END Side Overlay -->
+
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="/logout">
+								<i class="si si-logout mr-5"></i> Sign Out
+							</a>
+						</div>
+					</div>
+					<!-- END User Dropdown -->
+
+					<!-- Toggle Side Overlay -->
+					<!-- Layout API, functionality initialized in Codebase() -> uiApiLayout() -->
+
+					<!-- END Toggle Side Overlay -->
+				</div>
+				<!-- END Right Section -->
+			</div>
+			<!-- END Header Content -->
+
+			<!-- Header Search -->
+			<div id="page-header-search" class="overlay-header">
+				<div class="content-header content-header-fullrow">
+					<form action="be_pages_generic_search.html" method="post">
+						<div class="input-group">
+							<div class="input-group-prepend">
+								<!-- Close Search Section -->
+								<!-- Layout API, functionality initialized in Codebase() -> uiApiLayout() -->
+								<button type="button" class="btn btn-secondary" data-toggle="layout" data-action="header_search_off">
+									<i class="fa fa-times"></i>
+								</button>
+								<!-- END Close Search Section -->
+							</div>
+							<input type="text" class="form-control" placeholder="Search or hit ESC.." id="page-header-search-input" name="page-header-search-input">
+							<div class="input-group-append">
+								<button type="submit" class="btn btn-secondary">
+									<i class="fa fa-search"></i>
+								</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<!-- END Header Search -->
+
+			<!-- Header Loader -->
+			<!-- Please check out the Activity page under Elements category to see examples of showing/hiding it -->
+			<div id="page-header-loader" class="overlay-header bg-primary">
+				<div class="content-header content-header-fullrow text-center">
+					<div class="content-header-item">
+						<i class="fa fa-sun-o fa-spin text-white"></i>
+					</div>
+				</div>
+			</div>
+			<!-- END Header Loader -->
+		</header>
+		<!-- END Header -->
+    <!-- Main Container -->
+    <main id="main-container">
+        <!-- Hero -->
+        <div class="bg-image" style="background-image: url('assets/img/banner.png');">
+            <div class="bg-black-op-75">
+                <div class="content content-top content-full text-center">
+                    <div class="py-20">
+                        <h1 class="h2 font-w700 text-white mb-10">Manage Product</h1>
+                        <h2 class="h4 font-w400 text-white-op mb-0"><a class="text-primary-light link-effect" href="be_pages_ecom_products.html">Add new</a> Product.</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END Hero -->
+
+        <!-- Breadcrumb -->
+        <div class="bg-body-light border-b">
+            <div class="content py-5 text-center">
+                <nav class="breadcrumb bg-body-light mb-0">
+                    <a class="breadcrumb-item" href="be_pages_ecom_dashboard.html">Dashboard</a>
+                    <a class="breadcrumb-item" href="be_pages_ecom_products.html">Products</a>
+                    <span class="breadcrumb-item active">Product Name</span>
+                </nav>
+            </div>
+        </div>
+        <!-- END Breadcrumb -->
+
+        <!-- Page Content -->
+        <div class="content">
+            <!-- Update Product -->
+            <div class="row">
+                <h2 class="col content-heading">
+                    <button type="submit" form="newProductForm" class="btn btn-success float-right"> <i class="fa fa-save"></i> Save </button>
+                    <span>New Product</span>
+                </h2>
+            </div>
+            <form id="newProductForm" action="/admin/process/products/add" method="post">
+                <div class="row gutters-tiny">
+                    <!-- Basic Info -->
+                    <div class="col-md-7">
+                        <div class="block block-rounded block-themed">
+                            <div class="block-header bg-gd-primary">
+                                <h3 class="block-title">Basic Info</h3>
+                            </div>
+                            <div class="block-content block-content-full">
+                                <div class="form-group row">
+                                    <label class="col-12" for="product-name">Name</label>
+                                    <div class="col-12">
+                                        <input type="text" class="form-control" id="product-name" name="product_name" placeholder="Product Name">
+                                    </div>
+                                </div>
+
+                                <!-- <div class="form-group row">
+                                    <label class="col-12" for="product-name">Slug</label>
+                                    <div class="col-12">
+                                        <input type="text" class="form-control" id="product-slug" name="product_slug" placeholder="Product Slug">
+                                    </div>
+                                </div> -->
+                                
+                                <div class="form-group row">
+                                    <div class="col-12">
+                                        <label>Category</label>
+                                        <!-- Select2 (.js-select2 class is initialized in Codebase() -> uiHelperSelect2()) -->
+                                        <!-- For more info and examples you can check out https://github.com/select2/select2 -->
+                                        <select class="js-select2 form-control" id="product-category" name="product_category" style="width: 100%;" data-placeholder="Choose one..">
+                                            <option></option><!-- Required for data-placeholder attribute to work with Select2 plugin -->
+                                            <% data.categories.map(group => { %>
+                                                <!-- <option value="1"></option> -->
+                                                <% if(group.subgroups.length){ %>
+                                                    <% group.subgroups.map(sub => { %>
+                                                        <optgroup label="<%= group.group_name %> -> <%= sub.sub_group_name %>">
+                                                            <% if(sub.categories.length){ %>
+                                                                <% sub.categories.map(cat => { %>
+                                                                    <option 
+                                                                        value="<%= group.id+'|'+sub.id+'|'+cat.id %>">
+                                                                        <%= cat.category_name %>
+                                                                    </option>
+                                                                <% }) %>
+                                                            <% } %>
+                                                        </optgroup>
+                                                    <% }) %>
+                                                <% } %>
+                                            <% }) %>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col">
+                                        <label for="">Brand</label>
+                                        <select class="js-select2 form-control" data-tags="true" name="product_brand" style="width: 100%;">
+                                            <option></option>
+                                        </select>
+                                    </div>
+                                    <div class="col">
+                                        <label for="">Status</label>
+                                        <select class="js-select2 form-control" name="product_status" style="width: 100%;" data-placeholder="Choose one..">
+                                            <option value="active">Active</option>
+                                            <option value="inactive">Inactive</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-lg-6 col-sm-6">
+                                        <label for="product-price">Price</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">
+                                                    <%= data.system.currency.symbol %>
+                                                </span>
+                                            </div>
+                                            <input type="number" class="form-control" id="product-price" name="product_price" placeholder="Price.." value="">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-sm-6">
+                                        <label for="product-price">Discounted Price</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">
+                                                    <%= data.system.currency.symbol %>
+                                                </span>
+                                            </div>
+                                            <input type="number" class="form-control" name="product_discounted_price" placeholder="Price.." value="">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- <input type='button' value='Schedule' idexit='schedule' style="background: transparent; border-color: transparent; color: #dbc07d;" /> -->
+
+                                    <!-- <div class="form-group row" id="date" style="display: none;"> -->
+                                    <!-- <label class="col-12" for="example-datepicker1">Schedule</label>
+                                    <div class="col-lg-6">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" style="font-weight: bold;">
+                                                    From
+                                                </span>
+                                            </div>
+                                            <input type="text" class="js-datepicker form-control" id="example-datepicker1" name="example-datepicker1" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="mm/dd/yy" placeholder="mm/dd/yy">
+                                        </div>
+                                    </div>
+                                        <div class="col-lg-6">
+                                        <div class="input-group">
+                                        <div class="input-group-prepend">
+                                                <span class="input-group-text" style="font-weight: bold;">
+                                                    To
+                                                </span>
+                                            </div>
+                                        <input type="text" class="js-datepicker form-control" id="example-datepicker1" name="example-datepicker1" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="mm/dd/yy" placeholder="mm/dd/yy">
+                                        </div>
+                                    </div>
+                                </div>-->
+
+                                <div class="form-group row">
+                                    <label class="col-12" for="product-meta-tags">Tags</label>
+                                    <div class="col-12">
+                                        <select class="js-select2 form-control" data-tags="true" name="product_tags" style="width: 100%;" multiple>
+                                            <option></option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                    
+                                <div class="form-group row">
+                                    <label class="col-12">Description</label>
+                                    <div class="col-12">
+                                        <!-- CKEditor (js-ckeditor id is initialized in Codebase() -> uiHelperCkeditor()) -->
+                                        <!-- For more info and examples you can check out http://ckeditor.com -->
+                                        <textarea class="form-control js-simplemde" name="product_description" placeholder="Main Description" rows="8"></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-12" for="product-description-short">Short Description</label>
+                                    <div class="col-12">
+                                        <textarea class="form-control" id="product-description-short" name="product_description_short" placeholder="Description visible on preview.." rows="6"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label class="col-6" for="product-stock" style="font-size: 20px;">Inventory</label>
+
+                                </div>
+                                    <div class="form-group row">
+                                    <label class="col-6" for="product-stock">SKU (Stock Keeping Unit)</label>
+                                    <label class="col-6" for="product-stock">Stock Status</label>
+                                    <div class="col-6 col-sm-6">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">
+                                                    <i class="fa fa-fw fa-archive"></i>
+                                                </span>
+                                            </div>
+                                            <input type="text" class="form-control" id="product-sku" name="product_sku" placeholder="0" value="">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-6 col-sm-6">
+                                        <select class="js-select2 form-control" name="product_stock" style="width: 100%;" data-placeholder="Choose one..">
+                                            <option value="in-stock">In Stock</option><!-- Required for data-placeholder attribute to work with Select2 plugin -->
+                                            <option value="out-of-stock">Out of Stock</option>
+                                            <option value="backorder">On Backorder</option>
+                                        </select>
+                                    </div>
+                                </div><br><br>
+
+                                <!-- <input type="checkbox" name="chkBox" id="chkBox" />
+                                <label for="chkBox">Enable product stock management</label><br> -->
+                                <div class="form-group row" name="field1" id="field1">
+                                    <label class="col-6" for="product-stock">Stock Quantity</label>
+                            
+                                    <div class="col-6 col-sm-6">
+                                        <div class="input-group">
+                                            
+                                            <input type="number" class="form-control" id="product-stock" name="product_stock_quantity" placeholder="" value="">
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                    <div class="form-group row" name="field3" id="field3">
+                                
+                                    <label class="col-6" for="product-stock">Low stock threshold</label>                   
+                                    
+                                    <div class="col-6 col-sm-6">
+                                        <div class="input-group">
+                                            
+                                            <input type="number" class="form-control" id="product-stock" name="product_stock_threshold" placeholder="" value="">
+                                        </div>
+                                    </div>
+
+                                    
+                        
+                                </div>
+
+                                <div class="form-group row" style="display: none;" name="field2" id="field2">
+                                    <label class="col-12" for="product-stock">Allow Backorders</label>
+                                    
+                                    <div class="col-12 col-sm-6">
+                                        <select class="js-select2 form-control" name="example-select2" style="width: 100%;" data-placeholder="Choose one..">
+                                            <option>Allow but notify customer</option><!-- Required for data-placeholder attribute to work with Select2 plugin -->
+                                            <option value="2">Do not Allow</option>
+                                            <option value="3">Allow</option>
+                                            
+                                        </select>
+                                    </div>                     
+                                </div>
+
+                               <!-- < input type="checkbox" name="chkBox2" id="chkBox2" />
+                                <label for="chkBox2">Allow only one quantity of this product to be bought in a single order</label><br><br> -->
+
+                                    <div class="form-group row d-none">
+                                    <label class="col-12">Purchase Note</label>
+                                    <div class="col-12">
+                                        <!-- CKEditor (js-ckeditor id is initialized in Codebase() -> uiHelperCkeditor()) -->
+                                        <!-- For more info and examples you can check out http://ckeditor.com -->
+                                        <textarea class="form-control" id="js-ckeditor2" name="js-ckeditor" placeholder="Main Description" rows="8"></textarea>
+                                    </div>
+                                </div>
+
+                                <!-- <input type="checkbox" name="chkBox3" id="chkBox3" />
+                                <label for="chkBox3">Enable product reviews</label> -->
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END Basic Info -->
+
+                    <!-- More Options -->
+                    <div class="col-md-5">
+                        <!-- Images -->
+                        <div class="block block-rounded block-themed">
+                            <div class="block-header bg-gd-primary">
+                                <h3 class="block-title">Images</h3>
+                            </div>
+                            <div class="block-content block-content-full">
+                                <!-- Existing Images -->
+                                <!-- <div class="row gutters-tiny items-push">
+                                    <div class="col-sm-6 col-xl-4">
+                                        <div class="options-container">
+                                            <img class="img-fluid options-item" src="assets/img/photos/photo8.jpg" alt="">
+                                            <div class="options-overlay bg-black-op-75">
+                                                <div class="options-overlay-content">
+                                                    <a class="btn btn-sm btn-rounded btn-alt-danger min-width-75" href="javascript:void(0)">
+                                                        <i class="fa fa-times"></i> Remove
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-xl-4">
+                                        <div class="options-container">
+                                            <img class="img-fluid options-item" src="assets/img/photos/photo18.jpg" alt="">
+                                            <div class="options-overlay bg-black-op-75">
+                                                <div class="options-overlay-content">
+                                                    <a class="btn btn-sm btn-rounded btn-alt-danger min-width-75" href="javascript:void(0)">
+                                                        <i class="fa fa-times"></i> Remove
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> -->
+                                <!-- END Existing Images -->
+
+                                <!-- DropzoneJS Container -->
+                                <!-- For more info and examples you can check out http://www.dropzonejs.com/#usage -->
+                                    <div class="custom-dropzone dropzone" action="/admin/process/products/image/temp">
+                                    </div><br>
+                                    <div id="dropzone-images" style="display: none"></div>
+                            </div>
+                        </div>
+                        <!-- END Images -->
+
+                        <!-- Meta Data -->
+                        <div class="block block-rounded block-themed">
+                            <div class="block-header bg-gd-primary">
+                                <h3 class="block-title">Meta Data</h3>
+                            </div>
+                            <div class="block-content">
+                                <div class="form-group row">
+                                    <label class="col-12" for="product-meta-title">Title</label>
+                                    <div class="col-12">
+                                        <input type="text" class="js-maxlength form-control" id="product-meta-title" name="product_meta_title" maxlength="55" data-always-show="true" data-placement="top" placeholder="Meta Title" value="">
+                                        <div class="form-text text-muted font-size-sm text-right">55 Characters Max</div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-12" for="product-meta-tags">Tags</label>
+                                    <div class="col-12">
+                                        <select class="js-select2 form-control" data-tags="true" name="product_meta_tags" style="width: 100%;" multiple>
+                                            <option></option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-12" for="product-meta-description">Description</label>
+                                    <div class="col-12">
+                                        <textarea class="js-maxlength form-control" id="product-meta-description" name="product_meta_description" maxlength="115" data-always-show="true" data-placement="top" placeholder="Meta Description" rows="2"></textarea>
+                                        <div class="form-text text-muted font-size-sm text-right">115 Characters Max</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END Meta Data -->
+                    </div>
+                    <!-- END More Options -->
+                </div>
+            </form>
+            <!-- END Update Product -->
+        </div>
+        <!-- END Page Content -->
+    </main>
+    <!-- END Main Container -->
+<footer id="page-footer" class="opacity-0">
+                <div class="content py-20 font-size-xs clearfix">
+                    <div class="float-right">
+                        Developed by <a class="font-w600" href="#" target="_blank">Phamous Media</a>
+                    </div>
+                    <div class="float-left">
+                        <a class="font-w600" href="https://Coca.com" target="_blank">Coca</a> &copy; <span class="js-year-copy">2019</span>
+                    </div>
+                </div>
+            </footer>

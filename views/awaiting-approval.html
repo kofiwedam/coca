@@ -1,0 +1,84 @@
+<!doctype html>
+<!--[if lte IE 9]>     <html lang="en" class="no-focus lt-ie10 lt-ie10-msg"> <![endif]-->
+<!--[if gt IE 9]><!--> <html lang="en" class="no-focus"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+
+        <title>Coca Admin - Dashboard</title>
+
+        <meta name="description" content="Codebase - Bootstrap 4 Admin Template &amp; UI Framework created by pixelcave and published on Themeforest">
+        <meta name="author" content="pixelcave">
+        <meta name="robots" content="noindex, nofollow">
+
+        <!-- Open Graph Meta -->
+        <meta property="og:title" content="Codebase - Bootstrap 4 Admin Template &amp; UI Framework">
+        <meta property="og:site_name" content="Codebase">
+        <meta property="og:description" content="Codebase - Bootstrap 4 Admin Template &amp; UI Framework created by pixelcave and published on Themeforest">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="">
+        <meta property="og:image" content="">
+
+        <!-- Icons -->
+        <!-- The following icons can be replaced with your own, they are used by desktop and mobile browsers -->
+        <link rel="shortcut icon" href="assets/img/favicons/favicon.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicons/favicon-192x192.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon-180x180.png">
+        <!-- END Icons -->
+
+        <!-- Stylesheets -->
+        <!-- Codebase framework -->
+        <link rel="stylesheet" id="css-main" href="assets/css/codebase.min.css">
+
+        <!-- You can include a specific file from css/themes/ folder to alter the default color theme of the template. eg: -->
+        <!-- <link rel="stylesheet" id="css-theme" href="assets/css/themes/flat.min.css"> -->
+        <!-- END Stylesheets -->
+    </head>
+
+    <main id="main-container">
+        <!-- Page Content -->
+        <div class="bg-image" style="background-image: url('assets/img/photos/photo34@2x.jpg');">
+            <div class="row mx-0 bg-earth-op">
+                <div class="hero-static col-md-12 d-none d-md-flex align-items-md-end">
+                    <div class="p-30 invisible" data-toggle="appear">
+                        <p class="font-size-h3 font-w600 text-white">
+                            Your One-Stop Shop
+                        </p>
+                        <p class="font-italic text-white-op">
+                            Copyright &copy; <span class="js-year-copy">2020</span>
+                        </p>
+                    </div>
+                    <div class="col-md-6 col-xl-4 offset-xl-2 d-flex mb-300 align-self-center bg-white">
+                        <div class="content content-full">
+                            <!-- Header -->
+                            <div class="px-30 py-10 text-center">
+                                <a class="link-effect font-w700" href="/">
+                                    <img src="assets/img/logo.png" style="width: 70px;">
+                                </a>
+                                <h1 class="h3 font-w700 mt-30 mb-10">Account Pending</h1>
+                                <p class="font-w400 text-muted mb-0">You will be notified via your primary email address <strong><%= page.user ? '('+page.user.email+')' : "" %></strong> once your account has been approved.</p>
+
+                                <a href="/admin/logout" class="btn btn-sm btn-hero btn-alt-primary mt-30">
+                                    <i class="fa fa-lock mr-10"></i> Logout
+                                </a>
+                            </div>
+                            <!-- END Header -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END Page Content -->
+    </main>
+    <!-- END Main Container -->
+
+<footer id="page-footer" class="opacity-0">
+                <div class="content py-20 font-size-xs clearfix">
+                    <div class="float-right">
+                        Developed by <a class="font-w600" href="#" target="_blank">Phamous Media</a>
+                    </div>
+                    <div class="float-left">
+                        <a class="font-w600" href="https://Coca.com" target="_blank">Coca</a> &copy; <span class="js-year-copy">2019</span>
+                    </div>
+                </div>
+            </footer>

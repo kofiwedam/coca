@@ -1,0 +1,642 @@
+<!doctype html>
+<!--[if lte IE 9]>     <html lang="en" class="no-focus lt-ie10 lt-ie10-msg"> <![endif]-->
+<!--[if gt IE 9]><!--> <html lang="en" class="no-focus"> <!--<![endif]-->
+<head>
+	<base href="./">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+
+	<title>Dashboard - COCA Admin</title>
+
+	<meta name="description" content="COCA online shop - Admin panel">
+	<meta name="author" content="COCA">
+	<meta name="robots" content="noindex, nofollow">
+
+	<!-- Open Graph Meta -->
+	<meta property="og:title" content="COCA online shop - Admin panel">
+	<meta property="og:site_name" content="COCA">
+	<meta property="og:description" content="COCA online shop - Admin panel">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="">
+	<meta property="og:image" content="">
+
+	<!-- Icons -->
+	<!-- The following icons can be replaced with your own, they are used by desktop and mobile browsers -->
+	<link rel="shortcut icon" href="assets/img/favicons/favicon.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicons/favicon-192x192.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon-180x180.png">
+	<!-- END Icons -->
+
+	<!-- Jquery confirm -->
+	<link rel="stylesheet" href="assets/js/plugins/datatables/dataTables.bootstrap4.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
+	<link rel="stylesheet" href="assets/js/plugins/select2/select2.min.css">
+	<link rel="stylesheet" href="assets/js/plugins/simplemde/css/simplemde.min.css">
+	<!-- Stylesheets -->
+	<!-- Codebase framework -->
+	<link rel="stylesheet" id="css-main" href="assets/css/codebase.min.css">
+	<link rel="stylesheet" href="assets/js/plugins/dropzonejs/dropzone.css">
+
+	<!-- You can include a specific file from css/themes/ folder to alter the default color theme of the template. eg: -->
+	<!-- <link rel="stylesheet" id="css-theme" href="assets/css/themes/flat.min.css"> -->
+	<!-- END Stylesheets -->
+</head>
+<body>
+	<div id="page-container" class="sidebar-o side-scroll page-header-modern main-content-boxed">
+
+		<!-- Side Overlay-->
+		<aside id="side-overlay">
+			<!-- Side Overlay Scroll Container -->
+			<div id="side-overlay-scroll">
+			</div>
+		</aside>
+		<!-- END Side Overlay -->
+
+		<!-- Sidebar -->
+		<nav id="sidebar">
+			<!-- Sidebar Scroll Container -->
+			<div id="sidebar-scroll">
+				<!-- Sidebar Content -->
+				<div class="sidebar-content">
+					<!-- Side Header -->
+					<div class="content-header content-header-fullrow px-15">
+						<!-- Mini Mode -->
+						<div class="content-header-section sidebar-mini-visible-b">
+							<!-- Logo -->
+							<span class="content-header-item font-w700 font-size-xl float-left animated fadeIn">
+								<span class="text-dual-primary-dark">c</span><span class="text-primary">b</span>
+							</span>
+							<!-- END Logo -->
+						</div>
+						<!-- END Mini Mode -->
+
+						<!-- Normal Mode -->
+						<div class="content-header-section text-center align-parent sidebar-mini-hidden">
+							<!-- Close Sidebar, Visible only on mobile screens -->
+							<!-- Layout API, functionality initialized in Codebase() -> uiApiLayout() -->
+							<button type="button" class="btn btn-circle btn-dual-secondary d-lg-none align-v-r" data-toggle="layout" data-action="sidebar_close">
+								<i class="fa fa-times text-danger"></i>
+							</button>
+							<!-- END Close Sidebar -->
+
+							<!-- Logo -->
+							<div class="content-header-item">
+								<a href="dashboard.html">
+									<img src="assets/img/logo.png" style="width: 80px;">
+								</a>
+							</div>
+							<!-- END Logo -->
+						</div>
+						<!-- END Normal Mode -->
+					</div>
+					<!-- END Side Header -->
+
+					<!-- Side User -->
+
+
+					<!-- Side Navigation -->
+					<div class="content-side content-side-full">
+						<ul class="nav-main">
+							<li>
+								<a href="dashboard.html"><i class="si si-cup"></i><span class="sidebar-mini-hide">Dashboard</span></a>
+							</li>
+							<li class="nav-main-heading"><span class="sidebar-mini-visible">UI</span><span class="sidebar-mini-hidden">Catalog</span></li>
+							<li>
+								<a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="si si-tag"></i><span class="sidebar-mini-hide">Categories</span></a>
+								<ul>
+									<li>
+										<a href="categories/groups.html">Groups</a>
+									</li>
+									<li>
+										<a href="categories/sub-groups.html">Sub-groups</a>
+									</li>
+									<li>
+										<a href="categories.html">All Categories</a>
+									</li>
+
+								</ul>
+							</li>
+							<li>
+								<a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="si si-layers"></i><span class="sidebar-mini-hide">Products</span></a>
+								<ul>
+									<li>
+										<a href="products/products.html">Manage Products</a>
+									</li>
+									<li>
+										<a href="products/add-products.html">Add New Products</a>
+									</li>
+
+								</ul>
+							</li>
+							<li class="nav-main-heading"><span class="sidebar-mini-visible">Users</span><span class="sidebar-mini-hidden">Users</span></li>
+
+							<li>
+								<a href="users.html">
+									<i class="si si-people"></i>
+									<span class="sidebar-mini-hide">Users</span>
+								</a>
+							</li>
+
+							<li class="nav-main-heading"><span class="sidebar-mini-visible">Vendors</span><span class="sidebar-mini-hidden">Vendors</span></li>
+
+							<li>
+								<a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="si si-bag"></i><span class="sidebar-mini-hide">Vendors</span></a>
+								<ul>
+									<li>
+										<a href="vendors/merchants.html">Merchant</a>
+									</li>
+									<li>
+										<a href="vendors/shops.html">Shops</a>
+									</li>
+								</ul>
+							</li>
+
+							<li class="nav-main-heading"><span class="sidebar-mini-visible">UI</span><span class="sidebar-mini-hidden">Customers</span></li>
+
+							<li>
+								<a href="customers.html"><i class="si si-wallet"></i><span class="sidebar-mini-hide">Customers</span></a>
+							</li>
+
+							<li>
+								<a href="orders.html">
+									<i class="si si-basket-loaded"></i>
+									<span class="sidebar-mini-hide">Orders</span>
+								</a>
+							</li>
+
+							<li class="nav-main-heading">
+								<span class="sidebar-mini-visible">System</span><span class="sidebar-mini-hidden">System</span>
+							</li>
+							<li>
+								<a href="system/settings.html"><i class="si si-settings"></i><span class="sidebar-mini-hide">Settings</span></a>
+							</li>
+						</ul>
+					</div>
+					<!-- END Side Navigation -->
+				</div>
+				<!-- Sidebar Content -->
+			</div>
+			<!-- END Sidebar Scroll Container -->
+		</nav>
+		<!-- END Sidebar -->
+		<!-- Header -->
+		<header id="page-header">
+			<!-- Header Content -->
+			<div class="content-header">
+				<!-- Left Section -->
+				<div class="content-header-section">
+					<!-- Toggle Sidebar -->
+					<!-- Layout API, functionality initialized in Codebase() -> uiApiLayout() -->
+					<button type="button" class="btn btn-circle btn-dual-secondary" data-toggle="layout" data-action="sidebar_toggle">
+						<i class="fa fa-navicon"></i>
+					</button>
+					<!-- END Toggle Sidebar -->
+
+					<!-- Open Search Section -->
+					<!-- Layout API, functionality initialized in Codebase() -> uiApiLayout() -->
+					<button type="button" class="btn btn-circle btn-dual-secondary" data-toggle="layout" data-action="header_search_on">
+						<i class="fa fa-search"></i>
+					</button>
+					<!-- END Open Search Section -->
+
+					<!-- Layout Options (used just for demonstration) -->
+					<!-- Layout API, functionality initialized in Codebase() -> uiApiLayout() -->
+					<div class="btn-group" role="group">
+						<button type="button" class="btn btn-circle btn-dual-secondary" id="page-header-options-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<i class="fa fa-wrench"></i>
+						</button>
+						<div class="dropdown-menu" aria-labelledby="page-header-options-dropdown">
+							<h6 class="dropdown-header">Header</h6>
+							<button type="button" class="btn btn-sm btn-block btn-alt-secondary" data-toggle="layout" data-action="header_fixed_toggle">Fixed Mode</button>
+							<button type="button" class="btn btn-sm btn-block btn-alt-secondary d-none d-lg-block mb-10" data-toggle="layout" data-action="header_style_classic">Classic Style</button>
+							<div class="d-none d-xl-block">
+								<h6 class="dropdown-header">Main Content</h6>
+								<button type="button" class="btn btn-sm btn-block btn-alt-secondary mb-10" data-toggle="layout" data-action="content_layout_toggle">Toggle Layout</button>
+							</div>
+						</div>
+					</div>
+					<!-- END Layout Options -->
+				</div>
+				<!-- END Left Section -->
+
+				<!-- Right Section -->
+				<div class="content-header-section">
+					<!-- User Dropdown -->
+					<div class="btn-group" role="group">
+						<button type="button" class="btn btn-rounded btn-dual-secondary" id="page-header-user-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							P. Anderson <i class="fa fa-angle-down ml-5"></i>
+						</button>
+						<div class="dropdown-menu dropdown-menu-right min-width-150" aria-labelledby="page-header-user-dropdown">
+							<a class="dropdown-item" href="admin-profile.html">
+								<i class="si si-user mr-5"></i> Profile
+							</a>
+							<!-- Toggle Side Overlay -->
+							<!-- Layout API, functionality initialized in Codebase() -> uiApiLayout() -->
+							<a class="dropdown-item" href="admin-account.html" data-toggle="layout" data-action="side_overlay_toggle">
+								<i class="si si-wrench mr-5"></i> Settings
+							</a>
+
+							<div class="dropdown-divider"></div>
+							<!-- END Side Overlay -->
+
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="/logout">
+								<i class="si si-logout mr-5"></i> Sign Out
+							</a>
+						</div>
+					</div>
+					<!-- END User Dropdown -->
+
+					<!-- Toggle Side Overlay -->
+					<!-- Layout API, functionality initialized in Codebase() -> uiApiLayout() -->
+
+					<!-- END Toggle Side Overlay -->
+				</div>
+				<!-- END Right Section -->
+			</div>
+			<!-- END Header Content -->
+
+			<!-- Header Search -->
+			<div id="page-header-search" class="overlay-header">
+				<div class="content-header content-header-fullrow">
+					<form action="be_pages_generic_search.html" method="post">
+						<div class="input-group">
+							<div class="input-group-prepend">
+								<!-- Close Search Section -->
+								<!-- Layout API, functionality initialized in Codebase() -> uiApiLayout() -->
+								<button type="button" class="btn btn-secondary" data-toggle="layout" data-action="header_search_off">
+									<i class="fa fa-times"></i>
+								</button>
+								<!-- END Close Search Section -->
+							</div>
+							<input type="text" class="form-control" placeholder="Search or hit ESC.." id="page-header-search-input" name="page-header-search-input">
+							<div class="input-group-append">
+								<button type="submit" class="btn btn-secondary">
+									<i class="fa fa-search"></i>
+								</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<!-- END Header Search -->
+
+			<!-- Header Loader -->
+			<!-- Please check out the Activity page under Elements category to see examples of showing/hiding it -->
+			<div id="page-header-loader" class="overlay-header bg-primary">
+				<div class="content-header content-header-fullrow text-center">
+					<div class="content-header-item">
+						<i class="fa fa-sun-o fa-spin text-white"></i>
+					</div>
+				</div>
+			</div>
+			<!-- END Header Loader -->
+		</header>
+		<!-- END Header -->
+		<!-- Main Container -->
+		<main id="main-container">
+			<!-- Page Content -->
+			<div class="content">
+				<div class="row gutters-tiny invisible" data-toggle="appear">
+					<!-- Row #1 -->
+					<div class="col-3 col-xl-3">
+						<a class="block block-link-shadow text-right" href="javascript:void(0)">
+							<div class="block-content block-content-full clearfix">
+								<div class="float-left mt-10 d-none d-sm-block">
+									<i class="si si-shopping-cart fa-3x text-body-bg-dark"></i>
+								</div>
+								<div class="font-size-h3 font-w600" data-toggle="countTo" data-speed="1000" data-to="300">0</div>
+								<div class="font-size-sm font-w600 text-uppercase text-muted">
+									Sales 
+									<small>Today</small>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-3 col-xl-3">
+						<a class="block block-link-shadow text-right" href="javascript:void(0)">
+							<div class="block-content block-content-full clearfix">
+								<div class="float-left mt-10 d-none d-sm-block">
+									<i class="si si-layers fa-3x text-body-bg-dark"></i>
+								</div>
+								<div class="font-size-h3 font-w600">
+									<span data-toggle="countTo" data-speed="1000" data-to="600">0</span>
+								</div>
+								<div class="font-size-sm font-w600 text-uppercase text-muted">
+								Products</div>
+							</div>
+						</a>
+					</div>
+
+					<div class="col-3 col-xl-3">
+						<a class="block block-link-shadow text-right" href="/admin/orders/pending">
+							<div class="block-content block-content-full clearfix">
+								<div class="float-left mt-10 d-none d-sm-block">
+									<i class="si si-bag fa-3x text-body-bg-dark"></i>
+								</div>
+								<div class="font-size-h3 font-w600" data-toggle="countTo" data-speed="1000" data-to="30">0</div>
+								<div class="font-size-sm font-w600 text-uppercase text-muted">Pending Orders</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-3 col-xl-3">
+						<a class="block block-link-shadow text-right" href="/admin/users">
+							<div class="block-content block-content-full clearfix">
+								<div class="float-left mt-10 d-none d-sm-block">
+									<i class="si si-users fa-3x text-body-bg-dark"></i>
+								</div>
+								<div class="font-size-h3 font-w600" data-toggle="countTo" data-speed="1000" data-to="59">0</div>
+								<div class="font-size-sm font-w600 text-uppercase text-muted">
+									Users
+								</div>
+							</div>
+						</a>
+					</div>
+					<!-- END Row #1 -->
+				</div>
+				<div class="row gutters-tiny invisible" data-toggle="appear">
+					<!-- Row #2 -->
+					<div class="col-md-6">
+						<div class="block">
+							<div class="block-header">
+								<h3 class="block-title">
+									Sales <small>This week</small>
+								</h3>
+								<div class="block-options">
+									<button type="button" class="btn-block-option" data-toggle="block-option" data-action="state_toggle" data-action-mode="demo">
+										<i class="si si-refresh"></i>
+									</button>
+									<button type="button" class="btn-block-option">
+										<i class="si si-wrench"></i>
+									</button>
+								</div>
+							</div>
+							<div class="block-content block-content-full">
+								<div class="pull-all">
+									<!-- Lines Chart Container -->
+									<canvas class="js-chartjs-dashboard-lines"></canvas>
+								</div>
+							</div>
+							<div class="block-content">
+								<div class="row items-push">
+									<div class="col-6 col-sm-4 text-center text-sm-left">
+										<div class="font-size-sm font-w600 text-uppercase text-muted">This Month</div>
+										<div class="font-size-h4 font-w600">
+											GH₵1,390
+										</div>
+										<div class="font-w600 text-success">
+											<i class="fa fa-caret-up"></i> 
+											10%
+										</div>
+									</div>
+									<div class="col-6 col-sm-4 text-center text-sm-left">
+										<div class="font-size-sm font-w600 text-uppercase text-muted">This Week</div>
+										<div class="font-size-h4 font-w600">
+											GH₵3900
+										</div>
+										<div class="font-w600 text-danger">
+											<i class="fa fa-caret-down"></i> 
+											43%
+										</div>
+									</div>
+									<div class="col-12 col-sm-4 text-center text-sm-left">
+										<div class="font-size-sm font-w600 text-uppercase text-muted">Today</div>
+										<div class="font-size-h4 font-w600">
+											GH₵1200
+										</div>
+										<div class="font-w600 text-success">
+											<i class="fa fa-caret-up"></i> 
+											32%
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="block">
+							<div class="block-header">
+								<h3 class="block-title">
+									Earnings <small>This week</small>
+								</h3>
+								<div class="block-options">
+									<button type="button" class="btn-block-option" data-toggle="block-option" data-action="state_toggle" data-action-mode="demo">
+										<i class="si si-refresh"></i>
+									</button>
+									<button type="button" class="btn-block-option">
+										<i class="si si-wrench"></i>
+									</button>
+								</div>
+							</div>
+							<div class="block-content block-content-full">
+								<div class="pull-all">
+									<!-- Lines Chart Container -->
+									<canvas class="js-chartjs-dashboard-lines2"></canvas>
+								</div>
+							</div>
+							<div class="block-content bg-white">
+								<div class="row items-push">
+									<div class="col-6 col-sm-4 text-center text-sm-left">
+										<div class="font-size-sm font-w600 text-uppercase text-muted">This Month</div>
+										<div class="font-size-h4 font-w600">
+											GH₵5940
+										</div>
+										<div class="font-w600 text-success">
+											<i class="fa fa-caret-up"></i> 
+											23%
+											<!-- <i class="fa fa-caret-up"></i> +4% -->
+										</div>
+									</div>
+									<div class="col-6 col-sm-4 text-center text-sm-left">
+										<div class="font-size-sm font-w600 text-uppercase text-muted">This Week</div>
+										<div class="font-size-h4 font-w600">
+											GH₵2345
+										</div>
+										<div class="font-w600 text-danger">
+											<i class="fa fa-caret-down"></i> 
+											21%
+										</div>
+									</div>
+									<div class="col-12 col-sm-4 text-center text-sm-left">
+										<div class="font-size-sm font-w600 text-uppercase text-muted">Today</div>
+										<div class="font-size-h4 font-w600">
+											GH₵400
+										</div>
+										<div class="font-w600 text-success">
+											<i class="fa fa-caret-up"></i> 
+											49%
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- END Row #2 -->
+				</div>
+
+				<div class="row gutters-tiny invisible" data-toggle="appear">
+					<!-- Row #4 -->
+					<div class="col-md-6">
+						<a class="block block-link-shadow overflow-hidden" href="javascript:void(0)">
+							<div class="block-content block-content-full">
+								<i class="si si-briefcase fa-2x text-body-bg-dark"></i>
+								<div class="row py-20">
+									<div class="col-6 text-right border-r">
+										<div class="invisible" data-toggle="appear" data-class="animated fadeInLeft">
+											<div class="font-size-h3 font-w600">76</div>
+											<div class="font-size-sm font-w600 text-uppercase text-muted">Vendors</div>
+										</div>
+									</div>
+									<div class="col-6">
+										<div class="invisible" data-toggle="appear" data-class="animated fadeInRight">
+											<div class="font-size-h3 font-w600">54</div>
+											<div class="font-size-sm font-w600 text-uppercase text-muted">Active</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-6">
+						<a class="block block-link-shadow overflow-hidden" href="javascript:void(0)">
+							<div class="block-content block-content-full">
+								<div class="text-right">
+									<i class="si si-users fa-2x text-body-bg-dark"></i>
+								</div>
+								<div class="row py-20">
+									<div class="col-6 text-right border-r">
+										<div class="invisible" data-toggle="appear" data-class="animated fadeInLeft">
+											<div class="font-size-h3 font-w600 text-info">509</div>
+											<div class="font-size-sm font-w600 text-uppercase text-muted">Customers</div>
+										</div>
+									</div>
+									<div class="col-6">
+										<div class="invisible" data-toggle="appear" data-class="animated fadeInRight">
+											<div class="font-size-h3 font-w600 text-success">480</div>
+											<div class="font-size-sm font-w600 text-uppercase text-muted">Active</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+					<!-- END Row #4 -->
+				</div>
+				<div class="row gutters-tiny invisible" data-toggle="appear">
+					<!-- Row #5 -->
+					<div class="col-6 col-md-4 col-xl-2">
+						<a class="block block-link-shadow text-center" href="/admin/categories">
+							<div class="block-content ribbon ribbon-bookmark ribbon-success ribbon-left">
+								<p class="mt-5">
+									<i class="si si-tag fa-3x"></i>
+								</p>
+								<p class="font-w600">Categories</p>
+							</div>
+						</a>
+					</div>
+					<div class="col-6 col-md-4 col-xl-2">
+						<a class="block block-link-shadow text-center" href="profile">
+							<div class="block-content">
+								<p class="mt-5">
+									<i class="si si-user fa-3x"></i>
+								</p>
+								<p class="font-w600">Profile</p>
+							</div>
+						</a>
+					</div>
+					<div class="col-6 col-md-4 col-xl-2">
+						<a class="block block-link-shadow text-center" href="/admin/products">
+							<div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-left">
+
+								<p class="mt-5">
+									<i class="si si-layers fa-3x"></i>
+								</p>
+								<p class="font-w600">Products</p>
+							</div>
+						</a>
+					</div>
+					<div class="col-6 col-md-4 col-xl-2">
+						<a class="block block-link-shadow text-center" href="be_pages_generic_search">
+							<div class="block-content">
+								<p class="mt-5">
+									<i class="si si-magnifier fa-3x"></i>
+								</p>
+								<p class="font-w600">Search</p>
+							</div>
+						</a>
+					</div>
+					<div class="col-6 col-md-4 col-xl-2">
+						<a class="block block-link-shadow text-center" href="manage-vendors">
+							<div class="block-content">
+								<p class="mt-5">
+									<i class="si si-bag fa-3x"></i>
+								</p>
+								<p class="font-w600">Vendors</p>
+							</div>
+						</a>
+					</div>
+					<div class="col-6 col-md-4 col-xl-2">
+						<a class="block block-link-shadow text-center" href="account">
+							<div class="block-content">
+								<p class="mt-5">
+									<i class="si si-settings fa-3x"></i>
+								</p>
+								<p class="font-w600">Settings</p>
+							</div>
+						</a>
+					</div>
+					<!-- END Row #5 -->
+				</div>
+			</div>
+			<!-- END Page Content -->
+		</main>
+		<!-- END Main Container --><!-- Footer -->
+		<footer id="page-footer" class="opacity-0">
+			<div class="content py-20 font-size-xs clearfix">
+				<div class="float-right">
+					Developed by <a class="font-w600" href="#" target="_blank">Phamous Media</a>
+				</div>
+				<div class="float-left">
+					<a class="font-w600" href="https://COCA.com" target="_blank">COCA</a> &copy; <span class="js-year-copy">2020</span>
+				</div>
+			</div>
+		</footer>
+		<!-- END Footer -->
+	</div>
+	<!-- END Page Container -->
+
+	<!-- Codebase Core JS -->
+	<script src="assets/js/core/jquery.min.js"></script>
+	<script src="assets/js/core/bootstrap.bundle.min.js"></script>
+	<script src="assets/js/core/jquery.slimscroll.min.js"></script>
+	<script src="assets/js/core/jquery.scrollLock.min.js"></script>
+	<script src="assets/js/core/jquery.appear.min.js"></script>
+	<script src="assets/js/core/jquery.countTo.min.js"></script>
+	<script src="assets/js/plugins/select2/select2.full.min.js"></script>
+	<script src="assets/js/plugins/dropzonejs/min/dropzone.min.js"></script>
+	<script src="assets/js/core/js.cookie.min.js"></script>
+	<script src="assets/js/plugins/simplemde/js/simplemde.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/speakingurl/14.0.1/speakingurl.min.js"></script>
+	<script src="assets/js/plugins/jquery-slugify/slugify.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js" integrity="sha512-rmZcZsyhe0/MAjquhTgiUcb4d9knaFc7b5xAfju483gbEXTkeJRUMIPk6s3ySZMYUHEcjKbjLjyddGWMrNEvZg==" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
+
+	<script src="assets/js/plugins/datatables/jquery.dataTables.js"></script>
+	<script src="assets/js/plugins/datatables/dataTables.bootstrap4.min.js"></script>
+	<script src="assets/js/pages/be_tables_datatables.js"></script>
+
+	<script src="assets/js/codebase.js"></script>
+	<script src="assets/js/actions.js"></script>
+
+	<!-- Page JS Plugins -->
+	<script src="assets/js/plugins/chartjs/Chart.bundle.min.js"></script>
+	<script src="assets/js/plugins/jquery-validation/jquery.validate.min.js"></script>
+
+
+	<!-- Page JS Code -->
+	<script src="assets/js/pages/be_pages_dashboard.js"></script>
+	<script>
+		moment().format()
+	</script>
+</body>
+</html>
